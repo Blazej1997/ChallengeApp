@@ -2,7 +2,7 @@
 int age = 26;
 char sex = 'M';
 
-if (sex == 'K')
+if (sex == 'K' && age < 30)
 {
     Console.WriteLine("Kobieta poniżej 30 lat.");
 
