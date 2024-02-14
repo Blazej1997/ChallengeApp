@@ -19,7 +19,7 @@ namespace ChallengeApp.tests
 
         }
         [Test]
-        public void WhenCollectScore_ScholdCorectResult()
+        public void WhenEmployeeCollectMixedRatings()
         {
             var employee = new Employee("Magda", "Wróbel", 20);
             employee.AddScore(10);
@@ -34,17 +34,17 @@ namespace ChallengeApp.tests
 
 
         [Test]
-        public void WhenAddedAndSubtrackPoints()
+        public void CheckUserAddScoreMethodWithMinusPoint()
         {
             var employee = new Employee("Dawid", "Kowalski", 40);
-            employee.AddScore(20);
             employee.AddScore(-20);
-            employee.AddScore(40);
-            employee.AddScore(100);
+            employee.AddScore(-20);
+           
+            
 
             var result = employee.Result;
 
-            Assert.AreEqual(140, result);
+            Assert.AreEqual(-40, result);
 
 
         }
